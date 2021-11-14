@@ -17,7 +17,7 @@ namespace PureFunctions.Effects
             {
                 seconds-=timeIncrement;
                 value+=valueIncrement;
-                display.text = prefix + value + suffix;
+                display.text = prefix + value.ToString("F0") + suffix;
                 yield return null;
             }
             display.text = prefix + newValue + suffix;
