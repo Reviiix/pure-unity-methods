@@ -2,6 +2,10 @@
 
 namespace PureFunctions
 {
+    /// <summary>
+    /// This class sets all the objects in its array to not destroy on load
+    /// The class will then remove itself as its no longer needed
+    /// </summary>
     public class PersistObjects : MonoBehaviour
     {
         [SerializeField] private Transform[] persistantObjects;
@@ -9,6 +13,7 @@ namespace PureFunctions
         private void Awake()
         {
             SetObjectsToPersistAcrossScenes();
+            Destroy(this);
         }
 
         private void SetObjectsToPersistAcrossScenes()
@@ -17,7 +22,6 @@ namespace PureFunctions
             {
                 DontDestroyOnLoad(objectToPersist);
             }
-            Destroy(GetComponent<PersistObjects>());
         }
     }
 }

@@ -2,10 +2,23 @@ using System.Collections.Generic;
 
 namespace PureFunctions
 {
+    /// <summary>
+    /// A collection of utility methods to manipulate strings in generic ways.
+    /// </summary>
     public static class StringUtilities
     {
+        /// <summary>
+        /// This method attempts to reduce the expense of string operations by trying less expensive operations first.
+        /// Only use a large strings (like JSON) as there is a chance this can be more expensive (More likely on matching strings).
+        /// </summary>
         public static bool StringsMatch(string stringA, string stringB)
         {
+            if (string.IsNullOrEmpty(stringA) && string.IsNullOrEmpty(stringB)) return true;
+
+            if (string.IsNullOrEmpty(stringA) && !string.IsNullOrEmpty(stringB)) return false;
+
+            if (!string.IsNullOrEmpty(stringA) && string.IsNullOrEmpty(stringB)) return false;
+            
             if (string.IsNullOrEmpty(stringA) || string.IsNullOrEmpty(stringB)) return false;
             
             if (stringA.Length != stringB.Length) return false;
@@ -16,15 +29,16 @@ namespace PureFunctions
 
             var randomCharacterCheck = UnityEngine.Random.Range(zero, stringA.Length);
                 
+            // ReSharper disable once ConvertIfStatementToReturnStatement
             if (stringA[randomCharacterCheck] != stringB[randomCharacterCheck]) return false;
 
-            //Looks like we have to do a comparison anyway
+            //Looks like we have to do a comparison anyway, operation turned out more expensive that just doing a string comparison :(
             return string.Equals(stringA, stringB);
         }
 
         public static string AddSpacesBeforeCapitals(string stringToConvert)
         {
-            var returnVariable = new List<char>();
+            var sentence = new List<char>();
             const char space = ' ';
 
             for (var i = 0; i < stringToConvert.Length; i++)
@@ -35,14 +49,14 @@ namespace PureFunctions
                 {
                     if (i != 0)
                     {
-                        returnVariable.Add(space);
+                        sentence.Add(space);
                     }
                 }
 
-                returnVariable.Add(character);
+                sentence.Add(character);
             }
 
-            return new string(returnVariable.ToArray());
+            return new string(sentence.ToArray());
         }
     }
 }

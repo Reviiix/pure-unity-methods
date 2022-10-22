@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace PureFunctions.Movement
 {
+    /// <summary>
+    /// This class will rotate an objects on its axis.
+    /// </summary>
     public static class RotateObject
     {
         public static IEnumerator Rotate(Transform rotatingObject, float speed, int rotations, float endValue, Action callBack)
@@ -34,8 +37,6 @@ namespace PureFunctions.Movement
             rotation.z = endValue;
             rotatingObject.transform.localEulerAngles = rotation;
             callBack();
-
         }
-        
     }
 }

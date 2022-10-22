@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 namespace PureFunctions.Effects
 {
+    /// <summary>
+    /// This class will turn objects on and off intermittently.
+    /// Use the appropriate method for your object as theres no need to be working with Game Objects when we can work with smaller components
+    /// </summary>
     public static class FlashObject
     {
         private const float FlashTime = 0.1f;

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 namespace PureFunctions.Effects
 {
+    /// <summary>
+    /// This class will fade graphics in and out by either manipulating the canvas or alpha value of an graphic.
+    /// </summary>
     public static class Fade
     {
         public static IEnumerator FadeImageAlphaUp(Graphic imageToFade, float slowDown, Action callBack = null)

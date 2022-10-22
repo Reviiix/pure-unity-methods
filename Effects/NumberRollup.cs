@@ -4,6 +4,9 @@ using TMPro;
 
 namespace PureFunctions.Effects
 {
+    /// <summary>
+    /// This class will incrementally change one value until it reaches another value and display it in the supplied text component.
+    /// </summary>
     public static class NumberRollup 
     {
         public static IEnumerator Rollup(TMP_Text display, long originalValue, long newValue, string prefix, string suffix, float seconds, Action callBack = null)

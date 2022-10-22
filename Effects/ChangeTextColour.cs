@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace PureFunctions.Effects
 {
+    /// <summary>
+    /// This class will change a colour between two values intermittently whilst setting a text component to that value.
+    /// </summary>
     public static class ChangeTextColour
     {
         private static MonoBehaviour CoRoutineHandler => ProjectManager.Instance;

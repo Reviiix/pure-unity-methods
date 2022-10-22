@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace PureFunctions.Movement
 {
+    /// <summary>
+    /// These methods will move a transform in or out of view of the camera.
+    /// Uses the job system
+    /// </summary>
     public static class MoveInAndOutOfView
     {
         public static IEnumerator MoveTransformToCentre(Transform transformToMove, int speed, int distanceTolerance = 1, Action callBack = null)

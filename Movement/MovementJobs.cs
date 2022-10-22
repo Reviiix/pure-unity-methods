@@ -6,7 +6,9 @@ using UnityEngine;
 
 namespace PureFunctions.Movement
 {
-    //The Job system requires a lot of boiler plate code but is the most optimised development strategy in Unity 2020.
+    /// <summary>
+    /// The Job system requires a lot of boiler plate code but is the most optimised development strategy in Unity 202x.
+    /// </summary>
     public static class MovementJobs
     {
         public static void MoveObjects(Transform[] objectsToMove, Vector3[] positions, float speed)
