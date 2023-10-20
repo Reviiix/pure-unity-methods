@@ -10,7 +10,6 @@ namespace PureFunctions.Effects
     /// </summary>
     public static class ChangeTextColour
     {
-        private static MonoBehaviour CoRoutineHandler => ProjectManager.Instance;
         private static Coroutine _changeSequence;
         private const float ChangeTime = 0.75f;
         private static readonly WaitForSeconds WaitChangeTime = new WaitForSeconds(ChangeTime);
@@ -25,14 +24,14 @@ namespace PureFunctions.Effects
         
         public static void Change(TMP_Text textToChange, Color firstColor, Color secondColor)
         {
-            _changeSequence = CoRoutineHandler.StartCoroutine(ChangeTextColorSequence(textToChange, firstColor, secondColor));
+            _changeSequence = Coroutiner.StartCoroutine(ChangeTextColorSequence(textToChange, firstColor, secondColor)).Coroutine;
         }
 
         public static void StopChangeTextColorSequence()
         {
             if (_changeSequence == null) return;
          
-            CoRoutineHandler.StopCoroutine(_changeSequence);
+            Coroutiner.StopCoroutine(_changeSequence);
         }
 
         private static IEnumerator ChangeTextColorSequence(TMP_Text textToChange, Color firstColor, Color secondColor)
