@@ -9,7 +9,8 @@ namespace PureFunctions
     {
         /// <summary>
         /// This method attempts to reduce the expense of string operations by trying less expensive operations first.
-        /// Only use a large strings (like JSON) as there is a chance this can be more expensive (More likely on matching strings).
+        /// Only use a large strings (like JSON or something) that you suspect will likely be different.
+        /// As there is a chance this method can be more expensive than a simple string.Equals check (More likely on matching strings).
         /// </summary>
         public static bool StringsMatch(string stringA, string stringB)
         {
@@ -23,11 +24,7 @@ namespace PureFunctions
             
             if (stringA.Length != stringB.Length) return false;
 
-            const int zero = 0;
-
-            if (stringA[zero] != stringB[zero]) return false;
-
-            var randomCharacterCheck = UnityEngine.Random.Range(zero, stringA.Length);
+            var randomCharacterCheck = UnityEngine.Random.Range(0, stringA.Length);
                 
             // ReSharper disable once ConvertIfStatementToReturnStatement
             if (stringA[randomCharacterCheck] != stringB[randomCharacterCheck]) return false;
