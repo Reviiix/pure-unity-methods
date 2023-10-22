@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace PureFunctions
+namespace PureFunctions.UnitySpecific
 {
    /// <summary>
    /// The static wait class is intended to hold all generic waiting co routines that can be used throughout the application.

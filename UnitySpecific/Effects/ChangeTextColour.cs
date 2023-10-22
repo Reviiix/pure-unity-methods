@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace PureFunctions.Effects
+namespace PureFunctions.UnitySpecific.Effects
 {
     /// <summary>
     /// This class will change a colour between two values intermittently whilst setting a text component to that value.

@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace PureFunctions
+namespace PureFunctions.UnitySpecific
 {
     /// <summary>
     /// This class gets the product name from the player settings and displays it in the required component, TMP_Text.

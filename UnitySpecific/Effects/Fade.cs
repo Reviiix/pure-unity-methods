@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PureFunctions.Effects
+namespace PureFunctions.UnitySpecific.Effects
 {
     /// <summary>
     /// This class will fade graphics in and out by either manipulating the canvas or alpha value of an graphic.

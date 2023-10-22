@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace PureFunctions.Movement
+namespace PureFunctions.UnitySpecific.Movement
 {
     /// <summary>
-    /// This class will rotate an objects on its axis.
+    /// Rotate an objects on its axis.
+    /// Uses a coroutine and a while loop.
     /// </summary>
     public static class RotateObject
     {

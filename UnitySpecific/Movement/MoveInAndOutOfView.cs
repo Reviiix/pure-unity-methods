@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace PureFunctions.Movement
+namespace PureFunctions.UnitySpecific.Movement
 {
     /// <summary>
     /// These methods will move a transform in or out of view of the camera.

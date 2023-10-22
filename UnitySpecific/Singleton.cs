@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Abstract
+namespace PureFunctions.UnitySpecific
 {
     /// <summary>
     /// Inheriting from this class will follow the singleton pattern.

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-namespace PureFunctions
+namespace PureFunctions.UnitySpecific
 {
     /// <summary>
     /// Convenience class that creates an ephemeral MonoBehaviour instance.
@@ -16,7 +16,7 @@ namespace PureFunctions
         /// Create GameObject with MonoBehaviour to handle task (If non exists) then cache it.
         /// Use cached MonoBehaviour instance to run coroutine on demand.
         /// </summary>
-        /// <param name="iterationResult"> The coroutiner to be ran.</param>
+        /// <param name="iterationResult"> The coroutine to be ran.</param>
         /// <returns></returns>
         public static Response StartCoroutine(IEnumerator iterationResult)
         {
