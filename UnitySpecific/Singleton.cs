@@ -13,15 +13,15 @@ namespace PureFunctions.UnitySpecific
         {
             if (Instance != null)
             {
-                Debug.LogError(DebuggingAid.Debugging.DuplicateErrorMessagePrefix + name + DebuggingAid.Debugging.DuplicateSingletonErrorMessageSuffix + gameObject + DebuggingAid.Debugging.FullStop);
-                AssetReferenceLoader.DestroyOrUnload(gameObject);
+                Debug.LogError($"Duplicate singleton found: {Instance}");
+                Destroy(this);
                 return;
             }
             
             Instance = FindObjectOfType(typeof(T)) as T;
             if (Instance == null)
             {
-                Debug.LogError(DebuggingAid.Debugging.CanNotFindSingletonErrorMessage + name + DebuggingAid.Debugging.FullStop);
+                Debug.LogError($"Can not find singleton {typeof(T)}");
             }
         }
 
@@ -39,15 +39,16 @@ namespace PureFunctions.UnitySpecific
         {
             if (Instance != null)
             {
-                Debug.LogError(DebuggingAid.Debugging.DuplicateErrorMessagePrefix + name + DebuggingAid.Debugging.DuplicateSingletonErrorMessageSuffix + gameObject + DebuggingAid.Debugging.FullStop);
-                AssetReferenceLoader.DestroyOrUnload(gameObject);
+                Debug.LogError($"Duplicate singleton found: {Instance}");
+                Destroy(this);
                 return;
             }
             
             Instance = FindObjectOfType(typeof(T)) as T;
             if (Instance == null)
             {
-                Debug.LogError(DebuggingAid.Debugging.CanNotFindSingletonErrorMessage + name + DebuggingAid.Debugging.FullStop);
+                Debug.LogError($"Can not find singleton {typeof(T)}");
+                
             }
         }
 
