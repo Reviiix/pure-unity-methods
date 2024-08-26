@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace PureFunctions
+namespace PureFunctions.UnitySpecific
 {
     [RequireComponent(typeof(Button))]
     public class OpenURLButton : MonoBehaviour

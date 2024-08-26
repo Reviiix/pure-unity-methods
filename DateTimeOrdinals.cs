@@ -1,4 +1,4 @@
-namespace PureFunctions.DateTime
+namespace PureFunctions
 {
     public static class DateTimeOrdinals
     {
