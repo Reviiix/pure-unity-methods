@@ -11,6 +11,11 @@ namespace PureFunctions.UnitySpecific.Effects
     {
         public static IEnumerator Rollup(TMP_Text display, long originalValue, long newValue, string prefix, string suffix, float seconds, Action callBack = null)
         {
+            if (originalValue == newValue)
+            {
+                callBack?.Invoke();
+                yield break;
+            }
             const float timeIncrement = 0.01f;
             float value = originalValue;
             var difference = newValue - value;
