@@ -1,4 +1,4 @@
-namespace PureFunctions
+namespace pure_unity_methods
 {
     public static class DateTimeOrdinals
     {

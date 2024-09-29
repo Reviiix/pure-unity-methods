@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace PureFunctions.UnitySpecific
+namespace pure_unity_methods
 {
     [ExecuteInEditMode]
     public class ScreenSafeScaler : MonoBehaviour

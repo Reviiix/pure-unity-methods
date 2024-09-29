@@ -2,7 +2,7 @@
 using System.Collections;
 using TMPro;
 
-namespace PureFunctions.UnitySpecific.Effects
+namespace pure_unity_methods.Effects
 {
     /// <summary>
     /// This class will incrementally change one value until it reaches another value and display it in the supplied text component.

@@ -1,7 +1,10 @@
-public static class MathUtilities
+namespace pure_unity_methods
 {
-    public static bool IsEvenNumber(int i)
+    public static class MathUtilities
     {
-        return i % 2 == 0;
+        public static bool IsEvenNumber(int i)
+        {
+            return i % 2 == 0;
+        }
     }
 }

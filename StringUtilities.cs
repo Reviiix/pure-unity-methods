@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PureFunctions
+namespace pure_unity_methods
 {
     /// <summary>
     /// A collection of utility methods to manipulate strings in generic ways.

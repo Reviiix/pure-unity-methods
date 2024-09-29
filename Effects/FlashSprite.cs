@@ -2,16 +2,19 @@
 using System.Collections;
 using UnityEngine;
 
-public static class FlashSprite
+namespace pure_unity_methods.Effects
 {
-    public static IEnumerator Flash(SpriteRenderer renderer, float cycles, WaitForSeconds flashTime, Action completionCallBack)
+    public static class FlashSprite
     {
-        for (var i = 0; i < cycles; i++)
+        public static IEnumerator Flash(SpriteRenderer renderer, float cycles, WaitForSeconds flashTime, Action completionCallBack)
         {
-            renderer.enabled = !renderer.enabled;
-            yield return flashTime;
+            for (var i = 0; i < cycles; i++)
+            {
+                renderer.enabled = !renderer.enabled;
+                yield return flashTime;
+            }
+            renderer.enabled = true;
+            completionCallBack();
         }
-        renderer.enabled = true;
-        completionCallBack();
     }
 }

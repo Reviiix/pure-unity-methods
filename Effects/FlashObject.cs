@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace PureFunctions.UnitySpecific.Effects
+namespace pure_unity_methods.Effects
 {
     /// <summary>
     /// This class will turn objects on and off intermittently.

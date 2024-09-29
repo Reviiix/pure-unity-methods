@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace PureFunctions.UnitySpecific
+namespace pure_unity_methods
 {
     /// <summary>
     /// This class sets all the objects in its array to not destroy on load

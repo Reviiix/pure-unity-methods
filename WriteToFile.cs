@@ -1,7 +1,7 @@
 using System.IO;
 using UnityEngine;
 
-namespace PureFunctions
+namespace pure_unity_methods
 {
     public abstract class WriteToFile
     {

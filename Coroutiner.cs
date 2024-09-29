@@ -1,7 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
-namespace PureFunctions.UnitySpecific
+namespace pure_unity_methods
 {
     /// <summary>
     /// Convenience class that creates an ephemeral MonoBehaviour instance.

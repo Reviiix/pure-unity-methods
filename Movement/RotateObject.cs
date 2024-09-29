@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace PureFunctions.UnitySpecific.Movement
+namespace pure_unity_methods.Movement
 {
     /// <summary>
     /// Rotate an objects on its axis.

@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace PureFunctions.UnitySpecific
+namespace pure_unity_methods
 {
     /// <summary>
     /// This class gets the bundle version number from the player settings and displays it in the required component, TMP_Text
