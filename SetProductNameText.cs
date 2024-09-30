@@ -10,7 +10,7 @@ namespace pure_unity_methods
     /// The class will then remove itself as its no longer needed.
     /// </summary>
     [RequireComponent(typeof(TMP_Text))]
-    public class SetGameTitleText : MonoBehaviour
+    public class SetProductNameText : MonoBehaviour
     {
         [SerializeField] private bool capitalise;
         
