@@ -55,5 +55,15 @@ namespace pure_unity_methods
 
             return new string(sentence.ToArray());
         }
+        
+        /// <summary>
+        /// Same as string.isNullOrEmpty only "{}" count as empty value
+        /// </summary>
+        /// <param name="json"></param>
+        /// <returns></returns>
+        public static bool IsJsonNullOrEmpty(string json)
+        {
+            return string.IsNullOrEmpty(json) || json == "{}" || json == "{ }";
+        }
     }
 }
