@@ -9,12 +9,11 @@ namespace pure_unity_methods.Effects
     /// </summary>
     public static class NumberRollup 
     {
-        public static IEnumerator Rollup(TMP_Text display, long originalValue, long newValue, string prefix, string suffix, float seconds, Action callBack = null)
+        public static IEnumerator Rollup(TMP_Text display, long originalValue, long newValue, string prefix ,string suffix, float seconds, Action callBack = null)
         {
             if (originalValue == newValue)
             {
-                callBack?.Invoke();
-                yield break;
+                seconds = 0;
             }
             const float timeIncrement = 0.01f;
             float value = originalValue;
@@ -25,10 +24,10 @@ namespace pure_unity_methods.Effects
             {
                 seconds-=timeIncrement;
                 value+=valueIncrement;
-                display.text = prefix + value.ToString("F0") + suffix;
+                display.text = $"{prefix}{value}{suffix}";
                 yield return null;
             }
-            display.text = prefix + newValue + suffix;
+            display.text =  $"{prefix}{newValue}{suffix}";;
             callBack?.Invoke();
         }
     }
